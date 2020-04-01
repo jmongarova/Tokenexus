@@ -9,6 +9,8 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Newtonsoft.Json;
+using portable;
 
 namespace Test3
 {
@@ -25,15 +27,12 @@ namespace Test3
             var country = FindViewById<TextView>(Resource.Id.countryBox);
             var phone = FindViewById<TextView>(Resource.Id.phoneBox);
             var email = FindViewById<TextView>(Resource.Id.emailBox);
-            //product = (Product)arguments.getSerializable(Product.class.getSimpleName());
-
-            //textView.setText("Name: " + product.getName() + "\nCompany: " + product.getCompany() +
-            //"\nPrice: " + String.valueOf(product.getPrice()));
-            firstName.Text = UserData.FirstName;
-            lastName.Text = UserData.LastName;
-            country.Text = UserData.Country;
-            phone.Text = UserData.Phone;
-            email.Text = UserData.Email;
+            UserData desuserData = JsonConvert.DeserializeObject<UserData>(Intent.GetStringExtra("userData"));
+            firstName.Text = desuserData.FirstName;
+            lastName.Text = desuserData.LastName;
+            country.Text = desuserData.Country;
+            phone.Text = desuserData.Phone;
+            email.Text = desuserData.Email;
         }
     }
 }

@@ -8,8 +8,8 @@ using Android.Views;
 using Android.Widget;
 using System.Collections.Generic;
 using Android.Content;
-using System.Text.RegularExpressions;
-
+using Newtonsoft.Json;
+using portable;
 
 namespace Test3
 {
@@ -28,6 +28,7 @@ namespace Test3
         private TextView errForPhone;
         private TextView errForEmail;
         UserData userData;
+        Validation validation;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -49,7 +50,7 @@ namespace Test3
             errForEmail = FindViewById<TextView>(Resource.Id.erroremail);
             var reg = FindViewById<Button>(Resource.Id.sing);
             reg.Click += RegOnClick;
-
+            validation = new Validation();
 
         }
         protected override void OnResume()
@@ -70,35 +71,8 @@ namespace Test3
             string phone = String.Format(_editTextPhone.Text);
             string email = String.Format(_editTextEmail.Text);
             var checkSwitch = FindViewById<Switch>(Resource.Id.switchName);
-
-            //if (!IsValidForm(_editTextFirstName.Text))
-            //{
-            //    VisibleTextView(errForFirstName);
-            //    errForFirstName.Text = "Fields can't be empty";
-            //}
-            ////if (_classMy.IsValidForm(_editTextLastName) == false)
-            ////{
-            ////    VisibleTextView(errForLastName);
-            ////    errForLastName.Text = "Fields can't be empty";
-            ////}
-            //if (!IsValidForm(_editTextCountry.Text))
-            //{
-            //    VisibleTextView(errForCountry);
-            //    errForCountry.Text = "Fields can't be empty";
-            //}
-            //if (!IsValidForm(_editTextPhone.Text))
-            //{
-            //    VisibleTextView(errForPhone);
-            //    errForPhone.Text = "Fields can't be empty";
-            //}
-            //if (!IsValidEmail(_editTextEmail.Text))
-            //{
-            //    VisibleTextView(errForEmail);
-            //    errForEmail.Text = "Email entered incorrectly";
-            //}
-
-
-            if (IsValidForm(firstName) == true && IsValidForm(lastName) == true && IsValidForm(country) == true && IsValidForm(phone) == true && IsValidEmail(email) == true)
+            
+            if (validation.IsValidForm(firstName) == true && validation.IsValidForm(lastName) == true && validation.IsValidForm(country) == true && validation.IsValidForm(phone) == true && validation.IsValidEmail(email) == true)
             {
                 userData = new UserData(firstName.ToString(), lastName.ToString(), country.ToString(), phone.ToString(), email.ToString());
                 //UserData.FirstName = firstName.ToString();
@@ -114,7 +88,7 @@ namespace Test3
 
                 if (checkSwitch.Checked == true)
                 {
-                    
+                    intent.PutExtra("userData", JsonConvert.SerializeObject(userData));
                     StartActivity(intent);
                 }
                 else
@@ -127,13 +101,13 @@ namespace Test3
         }
         private void FocusChangeFirstName(object sender, View.FocusChangeEventArgs e)
         {
-            bool validation=true;
+            bool flag=true;
             if (!e.HasFocus)
             {
-                validation = IsValidForm(_editTextFirstName.Text);
+                flag = validation.IsValidForm(_editTextFirstName.Text);
 
             }
-            if(!validation)
+            if(!flag)
             {
                 VisibleTextView(errForFirstName);
                 errForFirstName.Text = "Fields can't be empty";
@@ -145,13 +119,13 @@ namespace Test3
         }
         private void FocusChangeLastName(object sender, View.FocusChangeEventArgs e)
         { 
-            bool validation = true;
+            bool flag = true;
             if (!e.HasFocus)
             {
-                validation = IsValidForm(_editTextLastName.Text);
+                flag = validation.IsValidForm(_editTextLastName.Text);
 
             }
-            if (!validation)
+            if (!flag)
             {
                 VisibleTextView(errForLastName);
                 errForLastName.Text = "Fields can't be empty";
@@ -163,13 +137,13 @@ namespace Test3
         }
         private void FocusChangeCountry(object sender, View.FocusChangeEventArgs e)
         {
-            bool validation = true;
+            bool flag = true;
             if (!e.HasFocus)
             {
-                validation = IsValidForm(_editTextCountry.Text);
+                flag = validation.IsValidForm(_editTextCountry.Text);
 
             }
-            if (!validation)
+            if (!flag)
             {
                 VisibleTextView(errForCountry);
                 errForCountry.Text = "Fields can't be empty";
@@ -182,13 +156,13 @@ namespace Test3
         }
         private void FocusChangePhone(object sender, View.FocusChangeEventArgs e)
         {
-            bool validation = true;
+            bool flag = true;
             if (!e.HasFocus)
             {
-                validation = IsValidForm(_editTextPhone.Text);
+                flag = validation.IsValidForm(_editTextPhone.Text);
 
             }
-            if (!validation)
+            if (!flag)
             {
                 VisibleTextView(errForPhone);
                 errForPhone.Text = "Fields can't be empty";
@@ -200,13 +174,13 @@ namespace Test3
         }
         private void FocusChangeEmail(object sender, View.FocusChangeEventArgs e)
         {
-            bool validation = true;
+            bool flag = true;
             if (!e.HasFocus)
             {
-                validation = IsValidForm(_editTextEmail.Text);
+                flag = validation.IsValidForm(_editTextEmail.Text);
 
             }
-            if (!validation)
+            if (!flag)
             {
                 VisibleTextView(errForEmail);
                 errForEmail.Text = "Fields can't be empty";
@@ -219,35 +193,13 @@ namespace Test3
         private void VisibleTextView(TextView err)
         {
             err.Visibility = ViewStates.Visible;
-            //err.BackgroundTint
+            //err.BackgroundTint edit.SetBackgroundColor(Android.Graphics.Color.ParseColor("#ff0000"));
         }
         private void InvisibleTextView(TextView err)
         {
             err.Visibility = ViewStates.Gone;
             //err.BackgroundTint
         }
-        private bool IsValidForm(string name)
-        {
-            if (string.IsNullOrWhiteSpace(name) || string.IsNullOrEmpty(name))
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
-        public bool IsValidEmail(string email)
-        {
-            const string cond = @"(\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*)";
-            if (Regex.IsMatch(email, cond))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
+        
     }
 }

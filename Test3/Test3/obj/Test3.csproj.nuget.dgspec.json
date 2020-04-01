@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jmong\\Downloads\\Telegram Desktop\\Test3_3\\Test3\\Test3\\Test3.csproj": {}
+    "C:\\Users\\jmong\\source\\repos\\Test3_4\\Test3\\Test3\\Test3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jmong\\Downloads\\Telegram Desktop\\Test3_3\\Test3\\Test3\\Test3.csproj": {
+    "C:\\Users\\jmong\\source\\repos\\Test3_4\\Test3\\Test3\\Test3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jmong\\Downloads\\Telegram Desktop\\Test3_3\\Test3\\Test3\\Test3.csproj",
+        "projectUniqueName": "C:\\Users\\jmong\\source\\repos\\Test3_4\\Test3\\Test3\\Test3.csproj",
         "projectName": "Test3",
-        "projectPath": "C:\\Users\\jmong\\Downloads\\Telegram Desktop\\Test3_3\\Test3\\Test3\\Test3.csproj",
+        "projectPath": "C:\\Users\\jmong\\source\\repos\\Test3_4\\Test3\\Test3\\Test3.csproj",
         "packagesPath": "C:\\Users\\jmong\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jmong\\Downloads\\Telegram Desktop\\Test3_3\\Test3\\Test3\\obj\\",
+        "outputPath": "C:\\Users\\jmong\\source\\repos\\Test3_4\\Test3\\Test3\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [

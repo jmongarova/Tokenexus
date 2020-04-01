@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "CQjeEZKFRDhjvnZSYa+/uuMXtcb2qZYaI2Sv3TC0I1wd9g7ate+6x4eRW7Mj5I6mqnmssuXmnPq4AHLlf7VkRw==",
+  "dgSpecHash": "HM82XOjLmVeXCwVXRWaWJuJ7vuzVkgOz1F51oJ6mFpjTbUHqv+BdUxkkUuHbf+CqOe7CvBaYjFsyZg6EOU+RiA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jmong\\Downloads\\Telegram Desktop\\Test3_3\\Test3\\Test3\\Test3.csproj",
+  "projectFilePath": "C:\\Users\\jmong\\source\\repos\\Test3_4\\Test3\\Test3\\mob.Android.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\jmong\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\jmong\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.common\\1.1.1.3\\xamarin.android.arch.core.common.1.1.1.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.runtime\\1.1.1.3\\xamarin.android.arch.core.runtime.1.1.1.3.nupkg.sha512",

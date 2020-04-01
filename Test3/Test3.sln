@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29911.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test3", "Test3\Test3.csproj", "{CF4370D1-4A5C-4549-BAF5-70506BB7EFE8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mob.Android", "Test3\mob.Android.csproj", "{CF4370D1-4A5C-4549-BAF5-70506BB7EFE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "portable", "portable\portable.csproj", "{019CF79A-D712-4179-9F7A-C91AE29C42CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,6 +19,10 @@ Global
 		{CF4370D1-4A5C-4549-BAF5-70506BB7EFE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF4370D1-4A5C-4549-BAF5-70506BB7EFE8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CF4370D1-4A5C-4549-BAF5-70506BB7EFE8}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{019CF79A-D712-4179-9F7A-C91AE29C42CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{019CF79A-D712-4179-9F7A-C91AE29C42CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{019CF79A-D712-4179-9F7A-C91AE29C42CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{019CF79A-D712-4179-9F7A-C91AE29C42CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

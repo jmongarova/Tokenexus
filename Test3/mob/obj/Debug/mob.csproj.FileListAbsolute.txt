@@ -1,0 +1,2 @@
+C:\Users\jmong\source\repos\Test3_4\Test3\mob\obj\Debug\mob.csprojAssemblyReference.cache
+C:\Users\jmong\source\repos\Test3_4\Test3\mob\obj\Debug\mob.csproj.CoreCompileInputs.cache

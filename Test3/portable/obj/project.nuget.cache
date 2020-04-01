@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "M70/VXDyz9W0QPx5+0HI4CHe/iYVgQBeOb/BmEq4DvS/hWlqfIgdyZgyF8YtwcNohAaRp6XgX4GLknrgoqfTSA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\jmong\\source\\repos\\Test3_4\\Test3\\portable\\portable.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jmong\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\jmong\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

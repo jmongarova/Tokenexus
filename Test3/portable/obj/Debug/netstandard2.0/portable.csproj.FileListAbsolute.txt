@@ -1,0 +1,9 @@
+C:\Users\jmong\source\repos\Test3_4\Test3\portable\bin\Debug\netstandard2.0\portable.deps.json
+C:\Users\jmong\source\repos\Test3_4\Test3\portable\bin\Debug\netstandard2.0\portable.dll
+C:\Users\jmong\source\repos\Test3_4\Test3\portable\bin\Debug\netstandard2.0\portable.pdb
+C:\Users\jmong\source\repos\Test3_4\Test3\portable\obj\Debug\netstandard2.0\portable.csprojAssemblyReference.cache
+C:\Users\jmong\source\repos\Test3_4\Test3\portable\obj\Debug\netstandard2.0\portable.csproj.CoreCompileInputs.cache
+C:\Users\jmong\source\repos\Test3_4\Test3\portable\obj\Debug\netstandard2.0\portable.AssemblyInfoInputs.cache
+C:\Users\jmong\source\repos\Test3_4\Test3\portable\obj\Debug\netstandard2.0\portable.AssemblyInfo.cs
+C:\Users\jmong\source\repos\Test3_4\Test3\portable\obj\Debug\netstandard2.0\portable.dll
+C:\Users\jmong\source\repos\Test3_4\Test3\portable\obj\Debug\netstandard2.0\portable.pdb
